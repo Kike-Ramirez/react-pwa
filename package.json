@@ -1,5 +1,5 @@
 {
-  "name": "ReactPWA",
+  "name": "reactpwa",
   "version": "0.2.8",
   "description": "A highly scalable, Progressive Web Application foundation with the best Developer Experience (DX).",
   "scripts": {
@@ -15,11 +15,7 @@
     "docker:prod:image": "npm run docker:dev:image && npm run docker:prod:build && NODE_ENV=production pawjs docker build -t react-pwa-prod .",
     "docker:prod:start": "docker run -it -p 3003:3003 react-pwa-prod"
   },
-  "author": {
-    "name": "Atyantik Technologies Private Limited",
-    "email": "admin@atyantik.com",
-    "url": "https://www.atyantik.com/"
-  },
+  "author": "Atyantik Technologies Private Limited <admin@atyantik.com> (https://www.atyantik.com/)",
   "license": "MIT",
   "babel": {
     "extends": "pawjs/src/babel/.babelrc"
@@ -27,5 +23,14 @@
   "dependencies": {},
   "devDependencies": {
     "pawjs": "^0.4.7"
-  }
+  },
+  "main": "directories.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kike-Ramirez/react-pwa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kike-Ramirez/react-pwa/issues"
+  },
+  "homepage": "https://github.com/Kike-Ramirez/react-pwa#readme"
 }
