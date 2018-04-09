@@ -1,36 +1,16 @@
 {
-  "name": "reactpwa",
-  "version": "0.2.8",
-  "description": "A highly scalable, Progressive Web Application foundation with the best Developer Experience (DX).",
+  "name": "react-pwa",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts": "1.1.4"
+  },
   "scripts": {
-    "start": "pawjs start",
-    "build": "pawjs build",
-    "lint": "pawjs lint",
-    "test": "pawjs test",
-    "docker:dev:image": "NODE_ENV=development pawjs docker build -t react-pwa .",
-    "docker:dev:start": "docker run -it -v \"$PWD/src\":\"/app/src\" -p 3003:3003 react-pwa",
-    "docker:dev:lint": "docker run -it -v \"$PWD/src\":\"/app/src\" -p 3003:3003 react-pwa npm run lint",
-    "docker:dev:test": "docker run -it -v \"$PWD/src\":\"/app/src\" -p 3003:3003 react-pwa npm run test",
-    "docker:prod:build": "docker run -it -v \"$PWD/src\":\"/app/src\" -v \"$PWD/dist\":\"/app/dist\" react-pwa npm run build",
-    "docker:prod:image": "npm run docker:dev:image && npm run docker:prod:build && NODE_ENV=production pawjs docker build -t react-pwa-prod .",
-    "docker:prod:start": "docker run -it -p 3003:3003 react-pwa-prod"
-  },
-  "author": "Atyantik Technologies Private Limited <admin@atyantik.com> (https://www.atyantik.com/)",
-  "license": "MIT",
-  "babel": {
-    "extends": "pawjs/src/babel/.babelrc"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "pawjs": "^0.4.7"
-  },
-  "main": "directories.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kike-Ramirez/react-pwa.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Kike-Ramirez/react-pwa/issues"
-  },
-  "homepage": "https://github.com/Kike-Ramirez/react-pwa#readme"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
 }
